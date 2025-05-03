@@ -1,10 +1,10 @@
 package com.aniket.BookMyShow.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -21,6 +21,6 @@ public class Ticket extends BaseModel{
     private List<Payment> payments;
     @ManyToOne
     private User user;
-    private Data bookedAt;
+    private Date bookedAt;
     private double amount;
 }
